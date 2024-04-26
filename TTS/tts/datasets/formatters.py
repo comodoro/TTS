@@ -187,12 +187,12 @@ def mailabs(root_path, meta_files=None, ignored_speakers=None):
                     print("> File %s does not exist!" % (wav_file))
     return items
 
-def audiosvet(root_path, manifest_file, **kwargs):  # pylint: disable=unused-argument
-    """Spmple formatter for AudioSveet 
+def vojta(root_path, manifest_file, **kwargs):  # pylint: disable=unused-argument
+    """Sample formatter for simple Czech ljspeech-like dataset 
     """
     txt_file = os.path.join(root_path, manifest_file)
     items = []
-    speaker_name = "audiosvet"
+    speaker_name = "vojta"
     with open(txt_file, "r", encoding="utf-8") as ttf:
         for line in ttf:
             cols = line.split("|")
